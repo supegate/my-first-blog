@@ -1,0 +1,36 @@
+<html>
+   <head>
+   <title>Joseph's blog</title>   
+</head>
+   <body>
+     <div)
+       <h1><a href="">Joseph's Blog</a></h1>
+     </div>
+
+      <p>published: 21.12.2017, 12:00</p>
+       <h2><a href="">My first post</a></h2>
+       <p>Any chapters that have been updated will be marked [UPDATED] in the Table of Contents.
+          The online book should be considered a working draft, which means there are likely errors 
+          and bits of code that don’t run. Send me an email if you find something that is broken. </p>
+     <div>
+       <p>published: 21.12.2017, 13:00</p>
+       <h2><a href="">My secondIt builds on Python programming basics in early chapters to cover all the most important fundamentals of Django programming - including Django models, templates, function- and class-based views, forms, user management, authentication and site administration.
+
+ post</a></h2>
+       <p>Any chapters that have been updated will be marked [UPDATED] in the Table of Contents.
+          The online book should be considered a working draft, which means there are likely errors
+          and bits of code that don’t run. Send me an email if you find something that is broken. </p>
+      </div>
+
+      <div>
+
+      </div>
+   </body>
+
+
+
+
+   <p>Hi there!</p>
+   <p>It works!<p>
+</html>
+
