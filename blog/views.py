@@ -6,7 +6,7 @@ from .forms import PostForm
 
 # Create your views here.
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'blog/post_list.html',{'posts': posts})
 
 def post_detail(request, pk):
@@ -16,7 +16,7 @@ def post_detail(request, pk):
 @login_required
 def post_new(request):
    if request.method == "POST":
-       form = PostForm(request.POST)
+       form = PostForm(request.POST, request.FILES) # Add request.FILES
        if form.is_valid():
           post = form.save(commit=False)
           post.author = request.user

@@ -17,5 +17,7 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        <!-- List uploaded image -->
+        <img src="{{ post.image.url }}" width="640" alt="{{ post.title }}" >
     </div>
 {% endblock %}

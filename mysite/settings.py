@@ -25,7 +25,7 @@ SECRET_KEY = 'i0vim2&yn+_tq)1j9a0z-=!=biwur7n4m(-h--^ri-jc!v!z&r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','192.168.0.8','218.237.81.19']
 
 
 # Application definition
@@ -76,8 +76,22 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#       'ENGINE': 'django.db.backends.sqlite3',
+#       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+#       'ENGINE': 'django.db.backends.postgresql',
+#       'NAME': 'myproject',
+#       'USER': 'myprojectuser',
+#       'PASSWORD': 'password',
+#       'HOST': '127.0.0.1',
+#       'PORT': '',
+
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'chang0513',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -119,7 +133,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+   os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'www_static')
 
 
 LOGIN_REDIRECT_URL = '/'
+
+MEDIA_URL = '/upload_files/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+

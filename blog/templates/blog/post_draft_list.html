@@ -6,6 +6,8 @@
             <p class="date">created: {{ post.created_date|date:'d-m-y' }}</p>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|truncatechars:200 }}</p>
+            <!-- List uploaded image -->
+            <img src="{{ post.image.url }}" width="640" alt="{{ post.title }}" >
         </div>
     {% endfor %}
 {% endblock %}
